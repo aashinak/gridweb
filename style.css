@@ -79,7 +79,7 @@ body{
 
 .imgBox{
     grid-area: imgBox;
-    background-image: url(/images/pexels-ruvim-miksanskiy-1438761.jpg);
+    background-image: url(/images/background.jpg);
     background-size: cover;
 }
 
