@@ -1,0 +1,207 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: black;
+    line-height: 28px;
+}
+
+.wrapper{
+    max-width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    grid-template-rows: 1fr 4fr 1.2fr 1.2fr;
+    grid-template-areas: "logo logo header"
+                         "main main imgBox"
+                         "quotes quotes imgBox"
+                         "btn1 btn2 imgBox";
+}
+
+.logo{
+    grid-area: logo;
+    background-color: #cbe0f4;
+    display: flex;
+    align-items: center;
+    padding-left: 125px;
+    
+    
+    font-weight: bold;
+}
+.logo a{
+    color: #175e84;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.main{
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding:0 125px;
+
+}
+.main h1{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 49px;
+    margin-bottom: 30px;
+    max-width: 290px;
+    animation-delay: .3s;
+}
+
+.quotes{
+    grid-area: quotes;
+    background-color: #cbe0f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 125px;
+}
+
+.btn1{
+    grid-area: btn1;
+    background-color: #175e84;
+}
+
+.btn2{
+    grid-area: btn2;
+    background-color: #7396ba;
+}
+
+.imgBox{
+    grid-area: imgBox;
+    background-image: url(/images/pexels-ruvim-miksanskiy-1438761.jpg);
+    background-size: cover;
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 30px;
+} 
+ header ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+ }
+ header ul li a{
+    padding: 30px 15px;
+    color: black;
+    transition: color .2s ease-in;
+ }
+
+ .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    transition: background-color .2s ease-in-out;
+ }
+ .btn:hover{
+    background-color: #cbe0f4;
+ }
+ .btn a{
+     color: white;
+     transition: color .5s ease-in-out;
+ }
+ 
+ /* button hoverings */
+
+ header ul li:hover a{
+    color: #175e84;
+ }
+
+ .btn a:hover{
+    color: black;
+    font-size: larger;
+ }
+
+ /* media query */
+ @media(max-width:767px) {
+    
+    .wrapper{
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "logo logo"
+                             "header header"
+                             "imgBox imgBox"
+                             "main main"
+                             "quotes quotes"
+                             "btn1 btn2";
+       grid-template-rows: 100px 70px 50vh auto auto 70px;
+    }
+    .logo{
+        padding: 0px;
+        justify-content: center;
+    }
+    header{
+        padding: 0;
+        justify-content: center;
+        background-color: #A0BEE4;
+    }
+    .main{
+        padding: 50px 25px;
+    }
+    .quotes{
+        
+        padding: 18px 25px;
+    }
+    .quotes h2{
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .main h1{
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 10px;
+    }
+    
+}
+
+
+/* animations */
+.pop-in{
+    animation: popIn 2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes popIn{
+    from{
+        opacity: 0%;
+        transform: translateX(-150px) scale(0.8);
+    }
+    to{
+        opacity: 100%;
+        transform: none;
+    }
+}
+
+
+
+.slide-in{
+    animation: slideIn 2s ease forwards;
+}
+
+@keyframes slideIn{
+    from
+    {
+        opacity: 0;
+        transform: translateX(150px) skewY(10deg);
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
