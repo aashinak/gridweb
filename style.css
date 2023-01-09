@@ -134,6 +134,7 @@ header{
  @media(max-width:767px) {
      body{
          overflow-y:visible;
+         overflow-x:hidden;
      }
     
     .wrapper{
