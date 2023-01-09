@@ -79,7 +79,7 @@ body{
 
 .imgBox{
     grid-area: imgBox;
-    background-image: url(/images/background.jpg);
+    background-image: url(/images/background.png);
     background-size: cover;
 }
 
