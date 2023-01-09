@@ -132,6 +132,8 @@ header{
 
  /* media query */
  @media(max-width:767px) {
+     body{
+         overflow-y:visible;
     
     .wrapper{
         height: auto;
